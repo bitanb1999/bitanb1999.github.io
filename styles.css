@@ -59,9 +59,20 @@ header {
 }
 
 @keyframes pulse-animation {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 170, 0.7); }
-    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(0, 255, 170, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 170, 0); }
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 255, 170, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(0, 255, 170, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 255, 170, 0);
+    }
 }
 
 h1 {
@@ -157,9 +168,120 @@ footer a:hover {
     border-bottom-color: var(--text-main);
 }
 
+.mt-4 {
+    margin-top: 3.5rem;
+}
+
+section>h3 {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+.job {
+    margin-bottom: 2rem;
+}
+
+.job:last-child {
+    margin-bottom: 0;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.job-header h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.company {
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.job ul,
+.projects ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.job li,
+.projects li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.7rem;
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+.job li::before,
+.projects li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    line-height: 1;
+    top: 0.1rem;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-list li {
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+.skill-list strong {
+    color: var(--text-main);
+    display: inline-block;
+    width: 150px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1rem; }
-    .container { margin-top: 5vh; }
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .container {
+        margin-top: 5vh;
+    }
+
+    .skill-list strong {
+        width: 100%;
+        margin-bottom: 0.2rem;
+    }
 }
